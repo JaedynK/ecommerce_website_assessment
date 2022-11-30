@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<center>
+    <h1 class="headers">Welcome To Your Cart</h1>
+    <h5 class="headers">Please Make Sure Everything Is Correct</h5>
+
+    <div id="shopping_cart_item" class="list-group">
+
+    {% for details in list%}
+
+        <a href="{% url 'item_page' item_id=details.id %}" class="list-group-item list-group-item-action" aria-current="true">
+            {{details.name}}: {{details.quantity}} - ${{details.cost}}
+        <a href="{% url 'remove_from_cart' item_id=details.id %}" id="index_button">Delete Item</a>
+        </a>
+    {%endfor%}
+    
+    <a>--------------------------------</a>
+    <h8>TOTAL PRICE: ${{total_cost}}</h8>
+</center>
+        
+{% endblock %}

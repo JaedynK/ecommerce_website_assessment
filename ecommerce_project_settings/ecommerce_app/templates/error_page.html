@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<center>
+<h1 class="headers" ><b>{{searched}}: Out Of Stock</b></h1>
+<h1 class="headers">{{error}}</h1>
+
+    {% for item in out_of_stock%}
+    <img src='{{item.preview_url}}' width="300" height="300"></a><br>
+    {%endfor%}
+<h8 class="headers">We only sell planets</h8>
+</center>
+
+        
+{% endblock %}

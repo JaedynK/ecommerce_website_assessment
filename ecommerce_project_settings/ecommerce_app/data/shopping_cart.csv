@@ -1,0 +1,4 @@
+id,category,name,cost,size,image_url,quantity
+0,small,mercury,30000000,4780km,https://static.thenounproject.com/png/1544577-200.png,3
+2,medium,earth,5,12756km,https://static.thenounproject.com/png/5276826-200.png,5
+4,large,jupiter,26482468,139822Km,https://static.thenounproject.com/png/3257185-200.png,2

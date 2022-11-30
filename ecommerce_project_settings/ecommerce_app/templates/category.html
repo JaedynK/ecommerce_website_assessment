@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    {% for item in category_items|slice:":1"%}
+
+    <div class="container text-center">
+    <h1 class="headers">Here is all the {{item.category}} Planets we have in stock </h1>
+    
+    {%endfor%}
+        {% for item in category_items%}
+            <div class="row">
+                <div class="col"><a href="{% url 'item_page' item_id=item.id %}">{{item.name}} </a><br>
+                    <img src="{{item.image_url}}"><br>
+                    Size: {{item.size}} radius 
+                </div>
+            </div>
+            {% csrf_token %}
+
+            <form action="{% url 'add_to_cart' item_id=item.id %}" method=POST>
+                <button type="submit" class="btn btn-outline-success">Add to shopping cart</button>
+            </form><br>
+
+        {%endfor%}
+
+        
+        
+{% endblock %}

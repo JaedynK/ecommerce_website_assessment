@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+    <h5 class="headers"> Welcome Adam & Zaynab </h5>
+    <h1 class="headers">To my Planet E-Commerce Website</h1>
+
+
+    <div class="container text-center" id="index_head">Planet Categorys:
+              {% for item in sizes%}
+            
+              <div class="row ">
+            <center>
+                <div class="col-6 col-sm-3"><a id="index_category"class="nav-link" href="{% url 'category_list' category_name=item.category %}">{{item.category}}</a><br>
+                </div>
+            </center>
+              </div>
+              {%endfor%}
+
+{% endblock %}

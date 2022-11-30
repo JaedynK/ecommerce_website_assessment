@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center>
+
+      {% for details in item%}
+      <h1 class="headers">details about {{details.name}} </h1>
+
+      <div><a>It is a {{details.category}} planet</a></div>
+      <div><a>Buy it today at the low low price of ${{details.cost}}!!!</a></div>
+      <img src="{{details.image_url}}">
+      
+      {% csrf_token %}
+      <form action="{% url 'add_to_cart' item_id=details.id %}" method=POST>
+        <button type="submit" class="btn btn-outline-success">Add to shopping cart</button>
+      </form><br>
+      {%endfor%}
+
+</center>
+  
+
+{% endblock %}

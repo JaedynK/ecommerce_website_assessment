@@ -1,0 +1,9 @@
+id,category,name,cost,size,image_url
+0,small,mercury,10000000,4780km,https://static.thenounproject.com/png/1544577-200.png
+1,medium,venus,99,12104km,https://static.thenounproject.com/png/1311201-200.png
+2,medium,earth,1,12756km,https://static.thenounproject.com/png/5276826-200.png
+3,small,mars,212412,6780km,https://static.thenounproject.com/png/1311197-200.png
+4,large,jupiter,13241234,139822Km,https://static.thenounproject.com/png/3257185-200.png
+5,large,saturn,1234123435555299,116464km,https://static.thenounproject.com/png/1652243-200.png
+6,medium,uranus,123423421,50724km,https://static.thenounproject.com/png/2942501-200.png
+7,medium,neptune,3333444111,49248km,https://static.thenounproject.com/png/2462609-200.png
